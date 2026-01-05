@@ -1,0 +1,87 @@
+:root {
+    --bg-color: #f0f2f5;
+    --text-main: #2d3436;
+    --start-color: #2ecc71;
+    --stop-color: #e74c3c;
+    --reset-color: #3498db;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--bg-color);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+#myH1 {
+    font-size: 2.5rem; /* Reduced from 4rem for better balance */
+    font-weight: 300;
+    color: var(--text-main);
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 40px;
+    /* Soft shadow instead of a thick border */
+    background-color: #ffffff;
+    border-radius: 30px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+#display {
+    /* Using a monospaced font keeps numbers from shifting width */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 5rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 40px;
+    padding: 10px 30px;
+    background: #f8f9fa;
+    border-radius: 15px;
+    /* Subtle inner shadow for a "screen" look */
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.05);
+}
+
+#controls {
+    display: flex;
+    gap: 15px; /* Modern way to space elements */
+}
+
+#controls button {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 12px 28px;
+    min-width: 100px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+#controls button:active {
+    transform: translateY(2px);
+    box-shadow: none;
+}
+
+#startBtn { background-color: var(--start-color); }
+#startBtn:hover { background-color: #27ae60; transform: translateY(-2px); }
+
+#stopBtn { background-color: var(--stop-color); }
+#stopBtn:hover { background-color: #c0392b; transform: translateY(-2px); }
+
+#resetBtn { background-color: var(--reset-color); }
+#resetBtn:hover { background-color: #2980b9; transform: translateY(-2px); }
